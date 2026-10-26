@@ -1,0 +1,51 @@
+<section class="painel lista" aria-labelledby="titulo-lista">
+  <header class="painel-cabecalho">
+    <div>
+      <p class="secao-label">ACOMPANHAMENTO</p>
+      <h2 id="titulo-lista">Empréstimos registrados</h2>
+      <p class="subtitulo">Acompanhe devoluções e gerencie os livros emprestados.</p>
+    </div>
+    <span class="quantidade">{{ emprestimoService.listar().length }} registro(s)</span>
+  </header>
+
+  @if (emprestimoService.listar().length === 0) {
+    <div class="lista-vazia">
+      <div class="icone-vazio" aria-hidden="true">▤</div>
+      <h3>Nenhum empréstimo cadastrado</h3>
+      <p>Use o formulário ao lado para adicionar o primeiro empréstimo.</p>
+    </div>
+  } @else {
+    <div class="registros">
+      @for (emprestimo of emprestimoService.listar(); track emprestimo.id) {
+        <article class="registro">
+          <div class="registro-superior">
+            <div class="livro-icone" aria-hidden="true">▥</div>
+            <div class="dados-principais">
+              <h3>{{ emprestimo.tituloLivro }}</h3>
+              <p>Emprestado para <strong>{{ emprestimo.nomePessoa }}</strong></p>
+            </div>
+            <span class="status" [class.aberto]="!emprestimo.devolvido" [class.devolvido]="emprestimo.devolvido">
+              <span class="ponto" aria-hidden="true"></span>
+              {{ emprestimo.devolvido ? 'Devolvido' : 'Em aberto' }}
+            </span>
+          </div>
+
+          <div class="registro-inferior">
+            <p class="data-prevista">
+              <span aria-hidden="true">◷</span>
+              Devolução prevista: <strong>{{ formatarData(emprestimo.dataPrevistaDevolucao) }}</strong>
+            </p>
+            <div class="acoes">
+              <button type="button" class="botao-devolver" (click)="registrarDevolucao(emprestimo.id)" [disabled]="emprestimo.devolvido">
+                {{ emprestimo.devolvido ? 'Já devolvido' : 'Registrar devolução' }}
+              </button>
+              <button type="button" class="botao-remover" (click)="remover(emprestimo.id)" [attr.aria-label]="'Remover o empréstimo de ' + emprestimo.tituloLivro">
+                Remover
+              </button>
+            </div>
+          </div>
+        </article>
+      }
+    </div>
+  }
+</section>

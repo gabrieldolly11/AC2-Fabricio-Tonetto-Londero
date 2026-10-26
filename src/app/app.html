@@ -1,0 +1,71 @@
+<div class="pagina">
+  <header class="barra-superior">
+    <div class="conteudo-superior">
+      <div class="identidade">
+        <div class="identidade-icone" aria-hidden="true">▥</div>
+        <div class="identidade-textos">
+          <strong>LivroControl</strong>
+          <span>Gestão de empréstimos</span>
+        </div>
+      </div>
+      <span class="topo-etiqueta">AC2 • Desenvolvimento Web</span>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="apresentacao" aria-labelledby="titulo-principal">
+      <div class="fundo-ilustracao" aria-hidden="true">
+        <span class="livro decoracao-um"></span>
+        <span class="livro decoracao-dois"></span>
+        <span class="livro decoracao-tres"></span>
+      </div>
+      <div class="apresentacao-conteudo">
+        <span class="etiqueta">SISTEMA DE BIBLIOTECA</span>
+        <h1 id="titulo-principal">Seus livros emprestados,<br /><span>sempre sob controle.</span></h1>
+        <p>Cadastre empréstimos, acompanhe as datas previstas e registre devoluções em um só lugar.</p>
+        <div class="alunos">
+          <span class="alunos-label">DESENVOLVIDO POR</span>
+          <span>Gabriel Henrique Fernandes Torres <b>· RA 251157</b></span>
+          <span>Enzo Anthony Mazini Monteiro <b>· RA 251209</b></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="painel-resumo" aria-label="Resumo dos empréstimos">
+      <article class="indicador">
+        <div class="icone-indicador icone-total" aria-hidden="true">▦</div>
+        <div>
+          <p>Total de empréstimos</p>
+          <strong>{{ totalEmprestimos }}</strong>
+          <span>Registros cadastrados</span>
+        </div>
+      </article>
+      <article class="indicador">
+        <div class="icone-indicador icone-aberto" aria-hidden="true">◷</div>
+        <div>
+          <p>Em aberto</p>
+          <strong>{{ emprestimosEmAberto }}</strong>
+          <span>Aguardando devolução</span>
+        </div>
+      </article>
+      <article class="indicador">
+        <div class="icone-indicador icone-devolvido" aria-hidden="true">✓</div>
+        <div>
+          <p>Devolvidos</p>
+          <strong>{{ emprestimosDevolvidos }}</strong>
+          <span>Empréstimos concluídos</span>
+        </div>
+      </article>
+    </section>
+
+    <div class="grade-principal">
+      <app-cadastrar-emprestimo />
+      <app-lista-emprestimos />
+    </div>
+  </main>
+
+  <footer class="rodape">
+    <span>AC2 • Desenvolvimento Web Front-End</span>
+    <span>Prof. Fabrício Tonetto Londero</span>
+  </footer>
+</div>

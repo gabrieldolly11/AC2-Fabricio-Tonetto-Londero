@@ -1,0 +1,6 @@
+:root { font-family: 'Segoe UI', Arial, sans-serif; font-synthesis: none; color: #1d2f48; background: #f5f8fc; }
+* { box-sizing: border-box; }
+html { min-height: 100%; }
+body { margin: 0; min-width: 320px; }
+button, input { font-family: inherit; }
+button:focus-visible, input:focus-visible { outline: 3px solid #a2c6fa; outline-offset: 2px; }

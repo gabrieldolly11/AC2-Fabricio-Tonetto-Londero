@@ -1,0 +1,25 @@
+.painel {
+  background: #fff;
+  border: 1px solid #e6ebf0;
+  box-shadow: 0 12px 30px rgba(16, 41, 67, .045);
+  border-radius: 20px;
+  padding: 28px;
+}
+.painel-cabecalho { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 28px; }
+.icone-painel { width: 43px; height: 43px; display: grid; place-items: center; background: #e8f0fc; color: #2a62c6; font-size: 28px; font-weight: 400; border-radius: 13px; flex-shrink: 0; }
+.secao-label { font-size: 10px; letter-spacing: 1.6px; font-weight: 800; color: #356fce; margin: 0 0 6px; }
+h2 { font-size: 21px; letter-spacing: -.6px; margin: 0 0 6px; color: #1b2a40; }
+.subtitulo { font-size: 13px; line-height: 1.5; color: #718098; margin: 0; }
+.campo { margin-bottom: 20px; }
+label { color: #2c3b51; display: block; font-size: 13px; font-weight: 750; margin-bottom: 9px; }
+label span { color: #da624a; }
+input { display: block; width: 100%; min-height: 48px; border: 1px solid #dbe4ed; border-radius: 11px; padding: 10px 13px; color: #192b44; background-color: #fbfcfe; outline: none; font: inherit; font-size: 14px; transition: border-color .15s, box-shadow .15s; }
+input::placeholder { color: #9aa7b8; }
+input:focus { border-color: #407be0; box-shadow: 0 0 0 3px rgba(64, 123, 224, .11); background: #fff; }
+.botao-cadastrar { display: flex; width: 100%; align-items: center; justify-content: center; gap: 10px; min-height: 49px; border: 0; border-radius: 11px; color: #fff; background: #285fc0; font: inherit; font-weight: 750; font-size: 14px; cursor: pointer; transition: background .15s, transform .15s; margin-top: 5px; }
+.botao-cadastrar span { font-size: 23px; line-height: 1; font-weight: 400; }
+.botao-cadastrar:hover:not(:disabled) { background: #1d4d9f; transform: translateY(-1px); }
+.botao-cadastrar:disabled { cursor: not-allowed; opacity: .52; }
+.sucesso { margin: 17px 0 0; padding: 11px 13px; background: #e6f8ec; color: #166637; border: 1px solid #ccebd8; border-radius: 10px; font-size: 13px; font-weight: 650; }
+.observacao { margin: 14px 0 0; text-align: center; color: #91a0b0; font-size: 11px; }
+@media (max-width: 560px) { .painel { padding: 21px; } }

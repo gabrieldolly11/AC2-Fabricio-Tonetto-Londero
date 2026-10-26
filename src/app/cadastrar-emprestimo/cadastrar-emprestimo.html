@@ -1,0 +1,62 @@
+<section class="painel cadastro" aria-labelledby="titulo-cadastro">
+  <header class="painel-cabecalho">
+    <div class="icone-painel" aria-hidden="true">+</div>
+    <div>
+      <p class="secao-label">NOVO REGISTRO</p>
+      <h2 id="titulo-cadastro">Cadastrar empréstimo</h2>
+      <p class="subtitulo">Preencha os dados para registrar um livro emprestado.</p>
+    </div>
+  </header>
+
+  <form #formulario="ngForm" (ngSubmit)="cadastrar(formulario)">
+    <div class="campo">
+      <label for="nomePessoa">Nome da pessoa <span aria-hidden="true">*</span></label>
+      <input
+        id="nomePessoa"
+        name="nomePessoa"
+        type="text"
+        [(ngModel)]="nomePessoa"
+        placeholder="Ex.: Maria Oliveira"
+        autocomplete="name"
+        minlength="2"
+        maxlength="100"
+        required
+      />
+    </div>
+
+    <div class="campo">
+      <label for="tituloLivro">Título do livro <span aria-hidden="true">*</span></label>
+      <input
+        id="tituloLivro"
+        name="tituloLivro"
+        type="text"
+        [(ngModel)]="tituloLivro"
+        placeholder="Ex.: Dom Casmurro"
+        maxlength="150"
+        required
+      />
+    </div>
+
+    <div class="campo">
+      <label for="dataPrevistaDevolucao">Data prevista para devolução <span aria-hidden="true">*</span></label>
+      <input
+        id="dataPrevistaDevolucao"
+        name="dataPrevistaDevolucao"
+        type="date"
+        [(ngModel)]="dataPrevistaDevolucao"
+        required
+      />
+    </div>
+
+    <button class="botao-cadastrar" type="submit" [disabled]="!formulario.valid">
+      <span aria-hidden="true">+</span>
+      Cadastrar empréstimo
+    </button>
+  </form>
+
+  @if (mensagemSucesso) {
+    <p class="sucesso" role="status">✓ {{ mensagemSucesso }}</p>
+  }
+
+  <p class="observacao">Todos os campos são obrigatórios.</p>
+</section>
