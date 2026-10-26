@@ -1,0 +1,11 @@
+# Angular / Node
+/node_modules
+/.angular
+/dist
+/out-tsc
+/.cache
+# IDE and OS
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
