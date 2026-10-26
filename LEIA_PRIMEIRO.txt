@@ -38,13 +38,9 @@ O sistema permite:
 4. Estrutura do Projeto
 
 -A aplicação utiliza componentes e serviços do Angular.
-
 -EmprestimoService: responsável por gerenciar os empréstimos, utilizando os métodos listar(), adicionar(), remover() e registrarDevolucao().
-
 -CadastrarEmprestimo: componente responsável pelo formulário de cadastro.
-
 -ListaEmprestimos: componente responsável por apresentar os empréstimos e permitir sua remoção ou devolução.
-
 -Interface Emprestimo: define os dados de cada registro, incluindo identificador, nome da pessoa, título do livro, data prevista e situação da devolução.
 
 5. Como Executar o Projeto
