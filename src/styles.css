@@ -6,3 +6,16 @@
 * { box-sizing: border-box; }
 body { margin: 0; }
 button, input { font: inherit; }
+
+/* Visual mais simples: ocultar apenas os icones decorativos */
+.identidade-icone,
+.icone-indicador,
+.icone-painel,
+.icone-vazio,
+.livro-icone,
+.fundo-ilustracao,
+.status .ponto,
+.data-prevista > span,
+.botao-cadastrar > span {
+  display: none;
+}
