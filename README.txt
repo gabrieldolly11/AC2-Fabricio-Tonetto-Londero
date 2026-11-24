@@ -5,8 +5,8 @@ Desenvolvimento Web Front-End
 Professor: Fabrício Tonetto Londero
 
 Integrantes:
-- Gabriel Henrique Fernandes Torres – RA: 251157
-- Enzo Anthony Mazini Monteiro – RA: 251209
+- Gabriel Henrique Fernandes Torres
+- Enzo Anthony Mazini Monteiro
 
 1. Sobre o Projeto
 
